@@ -1,0 +1,21 @@
+/* pages/nouser/nouser.wxss */
+.container {
+  text-align: center; padding:20px 12px;
+}
+h2 {
+  width:100%; float:left; font-size:20px; padding:12px 0px;
+}
+.remark {
+  width: 100%; float:left; color:#888;
+}
+.operators {
+  width:100%; float:left;
+}
+.operators button {
+  margin-top: 15px;
+}
+
+
+.versionRemark {
+  width:100%; float:left; text-align:center; padding:15px 0px;
+}

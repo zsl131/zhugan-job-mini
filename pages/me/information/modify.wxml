@@ -1,0 +1,107 @@
+<import src="take-photo.wxml"/>
+<view wx:if="{{onTakePhoto}}" class="upload_id_card_view">
+  <template is="take-photo" data="{{photoBg: photoBg, curPhoto: curPhoto,photoMsg:photoMsg,onProcess:onProcess,canEdit: canEdit}}"/>
+</view>
+<!-- 画布，用于截取身份证 -->
+<canvas wx:if="{{showCanvas}}" class='myCanvas' canvas-id="{{canvas1}}"></canvas>
+<canvas wx:if="{{showCanvas2}}" class='myCanvas' canvas-id="{{canvas2}}"></canvas>
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title" style='text-align:center; color:#F00; padding:8px 0px;' wx:if="{{!canEdit}}">{{status=='0'?"待审核":(status=='1'?"审核通过":"当前状态")}}，不可编辑</view>
+    <view class="page__title" style='text-align:center; color:#F00; padding:8px 0px;' wx:if="{{canEdit && status==='2' && applyObj.reason}}">驳回原因：{{applyObj.reason}}</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">身份证正面<span wx:if="{{idCardError}}" class='error'>未识别身份证信息，建议重新上传</span></view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell__hd id-card-view">
+        <view class='id-view'>
+          <image wx:if="{{!takePhoto}}" mode="" src='{{idCardSrc}}'></image>
+          <view wx:if="{{!takePhoto}}" class='id-card-opt'>
+            <button bindtap='onTakePhoto' wx:if="{{canEdit}}" data-photo-type="front">上传</button>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">身份证背面</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell__hd id-card-view">
+        <view class='id-view'>
+          <image wx:if="{{!takePhoto}}" mode="" src='{{idCardSrc2}}'></image>
+          <view wx:if="{{!takePhoto}}" class='id-card-opt'>
+            <button bindtap='onTakePhoto' wx:if="{{canEdit}}" data-photo-type="back">上传</button>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">手持身份证</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell__hd id-card-view">
+        <view class='id-view' style="height:350px;">
+          <image wx:if="{{!takePhoto}}" mode="" src='{{idCardHand}}' style="height:350px;"></image>
+          <view wx:if="{{!takePhoto}}" class='id-card-opt'>
+            <button bindtap='onTakePhoto' wx:if="{{canEdit}}" data-photo-type="hand">上传</button>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="weui-cells__title">身份信息（上传身份证自动识别）</view>
+      <form report-submit="true" bindsubmit="onSubmitApply">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">姓名</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="name" class="weui-input" disabled="{{!canEdit}}" value="{{cardInfo.name}}" placeholder="输入姓名"/>
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">身份证号</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="identity" class="weui-input" disabled="{{!canEdit}}" value="{{cardInfo.cardNo}}" placeholder="输入身份证号"/>
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">性别</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindSexChange" disabled="{{!canEdit}}" range-key="name" range="{{sexObj}}">
+                        <view class="weui-select weui-select_in-select-after">{{sexName}}</view>
+                    </picker>
+                </view>
+            </view>
+          <!-- <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">家庭住址</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="address" class="weui-input" value="{{cardInfo.address}}" placeholder="输入家庭住址"/>
+            </view>
+          </view> -->
+          <view class="weui-cells__title">家庭住址</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">
+                <textarea name="address" disabled="{{!canEdit}}" value="{{cardInfo.address}}" class="weui-textarea" placeholder="输入家庭住址" style="height: 2.3em" />
+              </view>
+            </view>
+          </view>
+
+          
+        </view>
+        <view style="padding:8px 12px;">
+          <button wx:if="{{canEdit}}" type='primary' form-type='submit'>提交认证</button>
+          <button wx:if="{{!canEdit}}" type='default' disabled='true'>{{status=='0'?"待审核":(status=='1'?"审核通过":"当前状态")}}，不可提交</button>
+        </view>
+        <view class='submit-error' wx:if="{{submitErrorMsg}}">{{submitErrorMsg}}</view>
+        <view class="weui-cells__tips">请认真核对信息无误后再提交，以确保以快速审核通过。</view>
+      </form>
+  </view>
+</view>

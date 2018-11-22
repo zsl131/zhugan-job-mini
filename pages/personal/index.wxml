@@ -1,0 +1,19 @@
+<view class="list-personal">
+  <view class="single-personal">
+    <view class="personal-img-view"><image src="../../images/img/temp-pic.jpg" class="personal-img"></image></view>
+    <view class="personal-info">
+      <view class="base-info">
+        <view class="name">张三</view>
+        <view class="age">29岁</view>
+        <view class="sex">男</view>
+      </view>
+      <view class="hope"><b>昭阳区</b>服务员,店员/营业员,收银员</view>
+      <view class="remark">有亲和力，诚信正直，责任心强，有亲和力，诚信正直，责任心强，有亲和力，诚信正直，责任心强，有亲和力，诚信正直，责任心强</view>
+      <view class="contact">
+        <image src="../../images/img/phone.png"></image>
+        <image src="../../images/img/picture.png"></image>
+        <image src="../../images/img/video.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

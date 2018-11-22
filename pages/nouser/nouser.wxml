@@ -1,0 +1,12 @@
+<!--pages/nouser/nouser.wxml-->
+<view class="container">
+  <icon type="warn" size="100"/>
+  <div wx:if="{{canIUse}}">
+    <h2>授权提醒</h2>
+    <div class="remark">为提供更优质的服务请先授权。</div>
+    <div class="operators">
+      <button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">确定授权</button>
+    </div>
+  </div>
+  <div wx:else class="versionRemark">请升级微信版本</div>
+</view>

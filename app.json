@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/me/index",
+    "pages/me/phone/bind",
+    "pages/public/msg_succ",
+    "pages/me/information/modify", 
+    "pages/personal/index",
+    "pages/index/index",
+    "pages/nouser/nouser" 
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0d9a49",
+    "navigationBarTitleText": "项目名称",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFF",
+    "selectedColor": "#0d9a49",
+    "list": [
+      {
+        "pagePath": "pages/personal/index",
+        "text": "招兼职",
+        "iconPath": "images/tabBar/find_0.png",
+        "selectedIconPath": "images/tabBar/find_1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "找兼职",
+        "iconPath": "images/tabBar/user_0.png",
+        "selectedIconPath": "images/tabBar/user_1.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "个人中心",
+        "iconPath": "images/tabBar/home_0.png",
+        "selectedIconPath": "images/tabBar/home_1.png"
+      }
+    ]
+  }
+}

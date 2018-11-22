@@ -1,0 +1,55 @@
+/* pages/personal/index.wxss */
+.list-personal {
+  float:left; width:96%; margin-left:2%; padding:8px 0px;
+}
+.single-personal {
+  width:100%; float:left; padding: 6px 0px;
+  border-bottom: 1px #ddd dotted;
+}
+
+.personal-img-view {
+  float:left; width:32%; text-align: center;
+}
+.single-personal image.personal-img {
+  width:95px; height:120px; border:1px #ddd solid; border-radius: 6px; padding:3px;
+}
+
+.personal-info {
+  float:right; width:65%;
+}
+.base-info {
+  float:left; width:100%; 
+}
+.base-info view {
+  float:left; margin-right: 8px; color:#888888;
+}
+.base-info view.name {
+  font-weight: bold; color:#000;
+}
+.personal-info .hope {
+  float:left; width:100%; color:#444; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.personal-info .hope b {
+  font-size:12px; padding:2px 4px; background:#e5e5e5; margin-right:3px;
+}
+.personal-info .remark {
+  float:left; width:100%;  font-size:14px;
+  color:#aaa;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+  display:-webkit-box;
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  overflow:hidden; 
+}
+.personal-info .contact {
+  float:left; width:100%; margin-top:4px;
+}
+.personal-info .contact image {
+  float:left; width:28px; height:28px; margin-right:5px;
+}

@@ -1,0 +1,4 @@
+/* pages/me/phone/bind.wxss */
+.code-error{
+  width:100%; text-align: center; color:#F00;
+}

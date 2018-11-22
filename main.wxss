@@ -1,0 +1,6 @@
+.weui-cells__title {
+  background: #f8f8f8; margin:0px; padding: 8px 5px 8px 15px;
+}
+.weui-cells__tips {
+  background:#f8f8f8; padding: 8px 5px 8px 15px; margin:0px;
+}

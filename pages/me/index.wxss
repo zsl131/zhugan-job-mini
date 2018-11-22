@@ -1,0 +1,52 @@
+/* pages/me/index.wxss */
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.me-header {
+  padding: 5px 10px; background:#0d9a49; border-bottom:2px #087536 solid; border-top:1px #11af54 solid;
+}
+.header-img {
+  width:34%; text-align:center;
+}
+.header-img image {
+  width:50px; height:50px; border-radius: 50px; border:1px #05682f solid;
+}
+.header-con {
+  height:50px; padding:0px 5px 0px 15px; color:#FFF;
+}
+.header-con .name {
+  font-weight: bold;
+}
+.header-con .phone {
+  color:#dbffea;
+}
+.auth-logo {
+  width:30px; height:30px;
+}
+.auth-logo-question {
+  width:26px; height:26px; 
+}
+.personal-type {
+  font-size:10px; font-weight: normal; color:#FF0;
+}
+
+.placeholder{
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    background-color: #EBEBEB;
+    height: 2.3em;
+    line-height: 2.3em;
+    color: #cfcfcf;
+}
+
+
+
+.weui-tab__content{
+  padding: 10px;
+}
