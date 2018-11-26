@@ -1,0 +1,67 @@
+/* pages/me/company/auth.wxss */
+.id-card-view {
+  padding: 10px;
+}
+.id-view {
+   padding:5px 5px 0px 5px; border:3px #ddd dotted; border-radius: 6px; position: relative;
+   min-height: 180px;
+}
+.id-view image {
+  width:100%; padding:0px; height:175px;
+}
+.id-card-opt {
+  position:absolute; top: 38%; left:40%; opacity:0.7;
+}
+.id-card-opt button {
+  float:left;
+}
+.id-card-opt button image {float:left;}
+
+.take-photo {
+  position:absolute; top:2px; width:100%; left:0px; height:189px;
+}
+.take-photo-opt {
+  /* position: absolute; bottom:0px; opacity: 0.7; */
+  float:right; margin-top:-3px;
+}
+.take-photo-opt button {
+  margin-right: 10px; z-index:50
+}
+.error {
+  color:#F00; font-size:12px; padding-left:6px;
+}
+.submit-error {
+  text-align: center; padding:8px 12px; color:#F00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.opt-view {
+  position: absolute; bottom:20px; width:100%; text-align:center; 
+}
+.opt-view button {
+  text-align:center; background:none;
+}
+.opt-view button .img {
+  width:50px; height:50px;
+}
+.close-photo-img {
+  position: absolute; right:15px; top:15px; width:25px; height:25px;
+}
+.msg-view {
+  position: absolute; width:100%; padding:10px; top:20%; text-align:center; color:#FFF;
+}
+
+.myCanvas {
+  width:100vw; height: 100vh;
+}

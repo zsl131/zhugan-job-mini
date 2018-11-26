@@ -1,6 +1,8 @@
 {
   "pages":[
+    "pages/me/company/auth",
     "pages/me/index",
+    
     "pages/me/phone/bind",
     "pages/public/msg_succ",
     "pages/me/information/modify", 

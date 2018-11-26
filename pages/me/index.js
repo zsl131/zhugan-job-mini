@@ -44,7 +44,9 @@ Page({
         url: '/pages/me/information/modify', //跳转到个人认证
       })
     } else if(type == 'company') {
-
+      wx.navigateTo({
+        url: '/pages/me/company/auth', //跳转到个人认证
+      })
     }
   },
   loadInfo: function(e) {
