@@ -34,6 +34,16 @@ Page({
     applyObj: {}
   },
 
+  //显示的时候检测有无Personal
+  onShow: function () {
+    app.personalUtil.getCurrentPersonal(false, function (p) {
+      //console.log(p);
+      if (!p || p.checkPhone != '1') {
+        app.normalUtil.redirectToMsgFail("请先绑定手机号码", "/pages/me/phone/bind", "", "立即绑定", "/pages/me/index", "tabBar", "返回个人中心");
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

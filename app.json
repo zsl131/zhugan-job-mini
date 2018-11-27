@@ -1,10 +1,10 @@
 {
   "pages":[
-    "pages/me/company/auth",
     "pages/me/index",
-    
+    "pages/me/company/auth",
     "pages/me/phone/bind",
     "pages/public/msg_succ",
+    "pages/public/fail/msg_fail",
     "pages/me/information/modify", 
     "pages/personal/index",
     "pages/index/index",

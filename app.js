@@ -3,6 +3,7 @@ const storage = require("./utils/loginUserUtil.js")
 var apiUtil = require('./utils/apiUtil.js')
 const config = require("./utils/config.js");
 const normalUtil = require("./utils/normalUtil.js");
+const personalUtil = require("./utils/personalUtil.js");
 App({
   onLaunch: function () {
     try {
@@ -25,4 +26,5 @@ App({
   config: config,
   normalUtil: normalUtil,
   storage: storage,
+  personalUtil: personalUtil,
 })

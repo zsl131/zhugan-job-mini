@@ -2,7 +2,7 @@
 <template name="take-photo">
 
   <camera device-position="back" flash="off" binderror="error" style="width: 100vw; height: 100vh;position:fixed;z-index:100">
-    <cover-image src="{{photoBg}}" class="camera-bg"></cover-image>
+    <cover-image wx:if="{{photoBg}}" src="{{photoBg}}" class="camera-bg"></cover-image>
     <cover-image src="/images/img/close-white.png" class="close-photo-img" bindtap='closePhoto' data-target="front"></cover-image>
 
     <cover-view class="msg-view">{{photoMsg}}</cover-view>
