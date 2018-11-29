@@ -25,5 +25,9 @@
       <view class="weui-cell__bd">手机号码</view>
       <view class="weui-cell__ft weui-cell__ft_in-access">未绑定</view>
     </navigator>
+    <navigator url="/pages/me/tags/setting" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">我的标签</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{personal && personal.tags ? personal.tags : "未设置"}}</view>
+    </navigator>
 </view>
 </template>

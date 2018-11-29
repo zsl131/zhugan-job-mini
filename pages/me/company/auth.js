@@ -29,7 +29,7 @@ Page({
     app.personalUtil.getCurrentPersonal(false, function (p) {
       //console.log(p);
       if (!p || p.checkIdcard != '1') {
-        app.normalUtil.redirectToMsgFail("请先认证个人身份信息", "/pages/me/information/modify", "", "立即认证", "/pages/me/index", "tabBar", "返回个人中心");
+        app.normalUtil.redirectToMsgFail("请先认证个人身份信息，再认证单位信息", "/pages/me/information/modify", "", "立即认证", "/pages/me/index", "tabBar", "返回个人中心");
       }
     })
   },

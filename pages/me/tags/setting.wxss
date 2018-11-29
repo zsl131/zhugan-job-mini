@@ -1,0 +1,10 @@
+/* pages/me/tags/setting.wxss */
+.tags-view {
+  padding:10px;
+}
+.tags-view button {
+  margin-right:6px;
+}
+.submit-view {
+  padding: 10px;
+}

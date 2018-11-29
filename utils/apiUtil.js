@@ -4,7 +4,7 @@ const config = require('./config.js');
 function buildParams(obj) {
   try { //如果没有登陆用户就不传openid和nickname
     const loginUser = JSON.parse(wx.getStorageSync("loginUser"));
-    console.log(loginUser)
+    //console.log(loginUser)
     obj.openid = loginUser.openid;
     obj.nickname = loginUser.nickname;
     obj.headimg = loginUser.headimg;

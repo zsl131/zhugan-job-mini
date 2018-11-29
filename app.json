@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/me/index",
+    "pages/me/tags/setting",
     "pages/me/company/auth",
     "pages/me/phone/bind",
     "pages/public/msg_succ",
@@ -13,7 +14,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#0d9a49",
-    "navigationBarTitleText": "项目名称",
+    "navigationBarTitleText": "竹竿兼职",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {

@@ -1,0 +1,14 @@
+<view class="page">
+    <view class="page__hd page__header">
+        <view class="page__title">个人标签设置</view>
+        <view class="page__desc">设置个人标签，让用人单位能够快速了解自己。选择下面的标签然后点击“确定保存”即可</view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class='tags-view'>
+          <button wx:for="{{data}}" wx:key="item" size="mini" type="{{item.selected?'warn':'default'}}" bindtap='onClickTag' data-obj-id='{{item.id}}' data-obj-text='{{item.text}}'>{{item.text}}</button>
+        </view>
+        <view class='submit-view'>
+          <button type='primary' bindtap='onSave'>确定保存</button>
+        </view>
+    </view>
+</view>

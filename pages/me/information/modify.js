@@ -39,7 +39,7 @@ Page({
     app.personalUtil.getCurrentPersonal(false, function (p) {
       //console.log(p);
       if (!p || p.checkPhone != '1') {
-        app.normalUtil.redirectToMsgFail("请先绑定手机号码", "/pages/me/phone/bind", "", "立即绑定", "/pages/me/index", "tabBar", "返回个人中心");
+        app.normalUtil.redirectToMsgFail("请先绑定手机号码，再认证个人身份信息", "/pages/me/phone/bind", "", "立即绑定", "/pages/me/index", "tabBar", "返回个人中心");
       }
     })
   },

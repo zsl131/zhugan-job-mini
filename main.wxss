@@ -4,3 +4,12 @@
 .weui-cells__tips {
   background:#f8f8f8; padding: 8px 5px 8px 15px; margin:0px;
 }
+.page__header {
+  background:#Fafafa; border-bottom:1px #efefef solid; padding-bottom:8px;
+}
+.page__title {
+  padding:15px 0px 5px 15px; font-size:20px;
+}
+.page__desc {
+  padding: 0px 15px; color:#888; font-size:14px;
+}
