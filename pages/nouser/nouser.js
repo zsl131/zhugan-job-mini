@@ -19,7 +19,7 @@ Page({
   },
   getUserInfo: res => {
     //res.detail.userInfo
-    console.log(res)
+   // console.log(res)
     wx.login({
       success: data => {
         console.log(data);
@@ -27,7 +27,7 @@ Page({
         console.log(deviceInfo);
         //提交到服务端获取和解析用户信息
         app.apiUtil.request("WX_LOGIN", { code: data.code, pwd: res.detail.encryptedData, iv: res.detail.iv, brand: deviceInfo.brand, model: deviceInfo.model}, response => {
-         console.log(response)
+         //console.log(response)
           if(response.account) {
             app.storage.setLoginUser(response.account); 
             app.normalUtil.redirectToHome();

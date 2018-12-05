@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    maxTagsLen: 3, 
     data:[],
     selectedIds:[], //已经选择的标签ID
     selectedText:[] //已经选择的标签
@@ -59,15 +60,16 @@ Page({
   },
 
   generateData: function(objId, objText) {
+    const len = this.data.maxTagsLen;
     let selectedIds = this.data.selectedIds;
     let selectedText = this.data.selectedText;
     if (selectedIds.includes(objId)) {
       selectedIds.splice(selectedIds.findIndex(item => item === objId), 1);
       selectedText.splice(selectedText.findIndex(item => item === objText), 1);
     } else {
-      if (selectedIds.length >= 4) {
+      if (selectedIds.length >= len) {
         wx.showToast({
-          title: '最多只能设置4个标签',
+          title: '最多只能设置' + len +'个标签',
           icon: 'none'
         })
       } else {

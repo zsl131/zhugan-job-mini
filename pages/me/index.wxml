@@ -7,7 +7,7 @@
         <view class="weui-flex">
             <view><view>
               <view class='header-img'>
-                <image src="{{baseUrl+account.headimg}}"></image>
+                <image src="{{baseUrl+account.headimg}}" bindtap='uploadHeadimg'></image>
               </view>
             </view></view>
             <view class="weui-flex__item"><view class="header-con">

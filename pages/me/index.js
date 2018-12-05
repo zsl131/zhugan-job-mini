@@ -21,6 +21,8 @@ Page({
         });
       }
     });
+  },
+  onShow: function() {
     this.loadInfo();
   },
   checkAuth: function(e) {
@@ -54,6 +56,7 @@ Page({
     app.apiUtil.request("MINI-C02",{}, function(res) {
       console.log(res)
       that.setData({account: res.account, personal: res.personal});
+      app.storage.setLoginUser(res.account); //存缓存
     });
   },
   tabClick: function (e) {
@@ -62,5 +65,10 @@ Page({
       activeIndex: e.currentTarget.id
     });
   },
+  uploadHeadimg: function(e) {
+    wx.navigateTo({
+      url: '/pages/me/headimg/upload',
+    })
+  }
  
 });

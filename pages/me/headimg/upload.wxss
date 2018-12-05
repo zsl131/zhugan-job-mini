@@ -1,0 +1,6 @@
+.getCropperImage {
+  width:100%; text-align: center; color:#1aad16; line-height:50px;
+}
+.cropper-buttons {
+  width:96%; margin-left:2%;
+}
