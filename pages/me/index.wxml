@@ -4,6 +4,9 @@
     <view class="page__bd">
 
       <view class="page__bd_spacing me-header">
+        <view class='personal-status'>
+          <button type='{{personal.workStatus=="1"?"primary":"warn"}}' class='{{personal.workStatus!="1"?"no-work-btn":""}}' bindtap='setStatus' size='mini'>{{personal.workStatus=='0'?"待业中":(personal.workStatus=='1'?"工作中":"待业中")}}</button>
+        </view>
         <view class="weui-flex">
             <view><view>
               <view class='header-img'>

@@ -22,6 +22,27 @@ Page({
       }
     });
   },
+  setStatus: function() {
+    const that = this;
+    const status = this.data.personal.workStatus;
+    console.log(status)
+    wx.showModal({
+      title: '操作提示',
+      content: '是否设置工作状态为：'+(status=='1'?"待业":"工作中")+"？",
+      success: function(res) {
+        if(res.confirm) {
+          app.apiUtil.request("MINI-C04", {status:(status=="1"?"2":"1")}, function (res) {
+            wx.showToast({
+              title: res.message,
+            })
+            let p = that.data.personal;
+            p.workStatus = (status == "1" ? "2" : "1");
+            that.setData({personal : p});
+          });
+        }
+      },complete: function() {}
+    })
+  },
   onShow: function() {
     this.loadInfo();
   },

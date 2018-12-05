@@ -9,6 +9,15 @@ page,
 }
 .me-header {
   padding: 5px 10px; background:#0d9a49; border-bottom:2px #087536 solid; border-top:1px #11af54 solid;
+  position: relative;
+}
+.personal-status {
+  position: absolute; right: 10px; top:20px; color:#FFF;
+}
+.status-btn {
+}
+button.no-work-btn {
+  background:#ac340f;
 }
 .header-img {
   width:34%; text-align:center;
