@@ -1,6 +1,10 @@
 <template name="own">
   <view class="weui-cells__title">以下信息需要认证后才会显示</view>
   <view class="weui-cells weui-cells_after-title">
+    <navigator url="/pages/me/area/area" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">所在区域</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{personal && personal.areaCode ? personal.areaName : "设置区域服务更精准"}}</view>
+    </navigator>
     <block wx:if="{{personal && personal.checkIdcard == '1'}}">
       <navigator url="/pages/me/information/modify" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">姓名</view>

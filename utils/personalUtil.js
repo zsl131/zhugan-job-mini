@@ -1,6 +1,13 @@
 const apiUtil = require('./apiUtil.js')
 const CUR_PERSONAL_NAME = "current-personal-";
 
+const setCurrentPersonal = (personal) => {
+  wx.setStorage({
+    key: CUR_PERSONAL_NAME,
+    data: JSON.stringify(personal),
+  })
+}
+
 /**
  * 获取当前的Personal对象
  * @params remote 是否直接获取远程true：直接从服务端获取，false：先检测缓存，失败时再从服务端获取
@@ -31,5 +38,6 @@ const getCurrentPersonalRemote =(sucFn) => {
 }
 
 module.exports = {
-  getCurrentPersonal: getCurrentPersonal
+  getCurrentPersonal: getCurrentPersonal,
+  setCurrentPersonal: setCurrentPersonal,
 }

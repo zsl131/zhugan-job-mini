@@ -6,7 +6,7 @@
 
   <view class="weui-grids">
       <navigator url="" class="weui-grid" hover-class="weui-grid_active">
-          <image class="weui-grid__icon" src="../../images/img/icon_tabbar.png" />
+          <image class="weui-grid__icon" src="/images/img/icon_tabbar.png" />
           <view class="weui-grid__label">我的资质</view>
       </navigator>
       <navigator url="" class="weui-grid" hover-class="weui-grid_active">

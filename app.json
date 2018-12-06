@@ -2,6 +2,7 @@
   "pages":[
     "pages/me/index",
     "pages/me/headimg/upload",
+    "pages/me/area/area",
     "pages/me/tags/setting",
     "pages/me/company/auth",
     "pages/me/phone/bind",

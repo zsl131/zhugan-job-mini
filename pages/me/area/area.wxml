@@ -1,0 +1,15 @@
+<view class="page">
+    <view class="page__hd page__header">
+        <!-- <view class="page__title">所在区域设置</view> -->
+        <!-- <view class="page__desc">设置所在区域，能够获得更精准的服务。选择下面的区域然后点击“确定保存”即可</view> -->
+        <input class='name-input' type='text' bindinput="onInputName" placeholder='可输入区域名称筛选'/>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class='tags-view'>
+          <button wx:for="{{data}}" hidden='{{item.hide}}' wx:key="item" size="mini" type="{{item.checked?'warn':'default'}}" bindtap='onClick' data-obj-code='{{item.countyCode}}' data-obj-name='{{item.countyName}}'>{{item.countyName}}</button>
+        </view>
+        <view class='submit-view'>
+          <button type='primary' bindtap='onSave'>确定保存</button>
+        </view>
+    </view>
+</view>

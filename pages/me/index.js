@@ -3,8 +3,8 @@ var app = getApp();
 Page({
   data: {
     baseUrl: app.globalData.baseUrl,
-    tabs: ["个人信息", "作为人才", "作为用人单位"],
-    activeIndex: 0,
+    tabs: ["基础信息", "锦囊"],
+    activeIndex: 1,
     sliderOffset: 0,
     sliderLeft: 0,
     src:'',
@@ -25,10 +25,10 @@ Page({
   setStatus: function() {
     const that = this;
     const status = this.data.personal.workStatus;
-    console.log(status)
+    //console.log(status)
     wx.showModal({
       title: '操作提示',
-      content: '是否设置工作状态为：'+(status=='1'?"待业":"工作中")+"？",
+      content: '是否设置工作状态为：'+(status=='1'?"待业中":"在职中")+"？",
       success: function(res) {
         if(res.confirm) {
           app.apiUtil.request("MINI-C04", {status:(status=="1"?"2":"1")}, function (res) {
@@ -75,9 +75,10 @@ Page({
   loadInfo: function(e) {
     const that = this;
     app.apiUtil.request("MINI-C02",{}, function(res) {
-      console.log(res)
+      //console.log(res)
       that.setData({account: res.account, personal: res.personal});
       app.storage.setLoginUser(res.account); //存缓存
+      app.personalUtil.setCurrentPersonal(res.personal);
     });
   },
   tabClick: function (e) {

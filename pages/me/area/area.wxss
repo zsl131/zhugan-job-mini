@@ -1,0 +1,13 @@
+/* pages/me/area/area.wxss */
+.tags-view {
+  padding:10px;
+}
+.tags-view button {
+  margin-right:6px;
+}
+.submit-view {
+  padding: 10px;
+}
+.name-input {
+  width:94%; margin: 10px 2% 0px 2%; border:1px #ddd solid; height:35px; background:#FFF; border-radius: 5px; padding-left:2%;
+}
