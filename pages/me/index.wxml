@@ -41,7 +41,7 @@
                 <template is="own" data="{{personal: personal}}"/>
               </view>
               <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                <template is="company" data="{{activeIndex: 12, src: src}}"/>
+                <template is="company" data="{{personal: personal}}"/>
               </view>
             </view>
         </view>

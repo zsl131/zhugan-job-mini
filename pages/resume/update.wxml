@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells__title">期望工作岗位</view>
+  </view>
+  <view class='resume-view'>
+    <view class="show-selected-works-view">
+      <button wx:for="{{selectedWorks}}" wx:key="item" size="mini" type='warn'>{{item}}</button>
+    </view>
+    <view class="add-work-btn"><button type="default" size="mini" bindtap='setWorkShow' data-show="1">+ 选择岗位</button></view>
+    <view class="weui-cells__title">个人说明</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <textarea class="weui-textarea" value='{{remark}}' bindinput='onInputRemark' placeholder="请输入个人说明" style="height: 3.3em" />
+                <view class="weui-textarea-counter {{remarkError?'has-remark-error':'no-error'}}">{{curCount}}/{{maxCount}}</view>
+            </view>
+        </view>
+    </view>
+
+    <button type='primary' class='submit-btn' bindtap='onSubmit'>立即创建简历</button>
+  </view>
+</view>
+
+<view class="show-work-view" hidden='{{!showWorks}}'>
+  <view class="weui-flex show-work-header">
+      <view class="weui-flex__item show-work-title">选择工作岗位，最多【{{workCount}}】个</view>
+      <view class="close-view" bindtap='setWorkShow' data-show="0"><image src="/images/img/close-black.png" mode="scaleToFill"/></view>
+  </view>
+  <view class="show-work-content">
+    <button class="single-work-btn" wx:for="{{data}}" wx:key="item" size="mini" type="{{item.selected?'warn':'default'}}" bindtap='onClick' data-obj-id='{{item.id}}' data-obj-name='{{item.name}}'>{{item.name}}</button>
+  </view>
+</view>

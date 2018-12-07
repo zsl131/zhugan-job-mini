@@ -1,0 +1,38 @@
+/* pages/resume/update.wxss */
+.resume-view {
+  padding:10px 0px;
+}
+.submit-btn {
+  margin:10px;
+}
+.has-remark-error {
+  color:#F00;
+}
+.add-work-btn {
+  text-align: center; padding:10px;
+}
+.show-work-view {
+  width: 100vw; height: 100vh; position: absolute; top: 0px; left: 0px; background:#FFF; z-index:9999
+}
+.close-view {
+  width:30px; height:30px; padding:10px 5px 0px 5px;
+}
+.close-view image {
+  height:80%; width:80%;
+}
+.show-work-title {
+  line-height: 40px; text-align:center;
+}
+.show-work-header {
+  border-bottom:1px #ddd solid;
+}
+.show-work-content {
+  padding:10px;
+}
+.single-work-btn {
+  margin:10px;
+}
+
+.show-selected-works-view button {
+  margin:10px;
+}

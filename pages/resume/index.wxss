@@ -1,0 +1,13 @@
+/* pages/resume/index.wxss */
+.no-resume-view {
+  padding:10px; text-align: center;
+}
+.no-resume-view .remark {
+  padding: 20px 0px; color:#888;
+}
+.edit-view {
+  position: absolute; right:10px; top:8px; color:#0d9a49;
+}
+.edit-view image {
+  width:16px; height:16px;  margin-top:3px;
+}

@@ -1,21 +1,41 @@
 <template name="company">
-<!-- <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 150px;"></camera>
-<button type="primary" bindtap="takePhoto">拍照</button>
-<view>预览</view>
-<image mode="widthFix" src="{{src}}"></image> -->
+  <view wx:if="{{personal.checkCompany!='0'}}">
+    <view class="page__bd">
+      <view class="weui-cells__title">单位锦囊</view>
+    </view>
+    <view class="weui-grids">
+        <navigator url="/pages/me/company/auth" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-company-auth.png" />
+            <view class="weui-grid__label">认证材料</view>
+        </navigator>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/icon_tabbar.png" />
+            <view class="weui-grid__label">Grid</view>
+        </navigator>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/icon_tabbar.png" />
+            <view class="weui-grid__label">Grid</view>
+        </navigator>
+    </view>
+  </view>
 
-  <view class="weui-grids">
-      <navigator url="" class="weui-grid" hover-class="weui-grid_active">
-          <image class="weui-grid__icon" src="/images/img/icon_tabbar.png" />
-          <view class="weui-grid__label">我的资质</view>
-      </navigator>
-      <navigator url="" class="weui-grid" hover-class="weui-grid_active">
-          <image class="weui-grid__icon" src="../../images/img/icon_tabbar.png" />
-          <view class="weui-grid__label">Grid</view>
-      </navigator>
-      <navigator url="" class="weui-grid" hover-class="weui-grid_active">
-          <image class="weui-grid__icon" src="../../images/img/icon_tabbar.png" />
-          <view class="weui-grid__label">Grid</view>
-      </navigator>
+  <view wx:if="{{personal.checkIdcard!='0'}}">
+    <view class="page__bd">
+      <view class="weui-cells__title">个人锦囊</view>
+    </view>
+    <view class="weui-grids">
+        <navigator url="/pages/me/information/modify" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-personal-auth.png" />
+            <view class="weui-grid__label">认证材料</view>
+        </navigator>
+        <navigator url="/pages/resume/index" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-resume.png" />
+            <view class="weui-grid__label">我的简历</view>
+        </navigator>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-favorite.png" />
+            <view class="weui-grid__label">我的收藏</view>
+        </navigator>
+    </view>
   </view>
 </template>

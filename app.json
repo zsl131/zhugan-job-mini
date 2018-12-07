@@ -1,6 +1,8 @@
 {
   "pages":[
+    "pages/resume/index",
     "pages/me/index",
+    "pages/resume/update",
     "pages/me/headimg/upload",
     "pages/me/area/area",
     "pages/me/tags/setting",
