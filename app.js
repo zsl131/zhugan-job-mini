@@ -4,6 +4,7 @@ var apiUtil = require('./utils/apiUtil.js')
 const config = require("./utils/config.js");
 const normalUtil = require("./utils/normalUtil.js");
 const personalUtil = require("./utils/personalUtil.js");
+const util = require("./utils/util.js");
 App({
   onLaunch: function () {
     try {
@@ -27,4 +28,5 @@ App({
   normalUtil: normalUtil,
   storage: storage,
   personalUtil: personalUtil,
+  util: util,
 })

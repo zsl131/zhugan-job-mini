@@ -7,11 +7,11 @@
       <button wx:for="{{selectedWorks}}" wx:key="item" size="mini" type='warn'>{{item}}</button>
     </view>
     <view class="add-work-btn"><button type="default" size="mini" bindtap='setWorkShow' data-show="1">+ 选择岗位</button></view>
-    <view class="weui-cells__title">个人说明</view>
+    <view class="weui-cells__title">个人说明（*不能输入任何联系方式）</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">
-                <textarea class="weui-textarea" value='{{remark}}' bindinput='onInputRemark' placeholder="请输入个人说明" style="height: 3.3em" />
+                <textarea class="weui-textarea" value='{{remark}}' bindinput='onInputRemark' placeholder="请输入个人说明，如：工作经验、个人特长等" style="height: 3.3em" />
                 <view class="weui-textarea-counter {{remarkError?'has-remark-error':'no-error'}}">{{curCount}}/{{maxCount}}</view>
             </view>
         </view>

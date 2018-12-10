@@ -11,3 +11,55 @@
 .edit-view image {
   width:16px; height:16px;  margin-top:3px;
 }
+
+.resume-header {
+  border-bottom:1px #e8e8e8 solid; width:100vw; height:65px;
+}
+.resume-header-img {
+  width:50px; height:50px; border-radius: 50px; margin: 5px 10px; border: 1px #ddd solid;
+}
+.header-single-line {
+  line-height: 30px; width:100%; float:left; margin-top: 4px;
+}
+.header-single-line .name {
+  font-weight: bold; float:left;
+}
+.header-single-line .tag {
+  font-size:12px; background:#eee; padding:1px 4px; float:left; margin-right:3px; line-height:20px;
+}
+
+.count-view {
+  padding:8px 0px; border-bottom:1px #e8e8e8 solid;
+}
+.flex-item-count {
+  text-align:center; border-right:1px #e8e8e8 solid; 
+}
+.count-view .weui-flex__item:last-child view.flex-item-count {
+  border-right: none;
+}
+
+.flex-item-count .lable {
+  font-size:12px; color:#888;
+}
+.flex-item-count .value {
+  font-size:14px;
+}
+.single-info-view {
+  width:96%; padding:5px 2% 2px 2%; float:left; font-size:14px;
+}
+.single-info-view view.lable {
+  float:left; color:#0d9a49; margin-left:10px;
+}
+.single-info-view view.value {
+  float:left; margin-left:10px; color:#444;
+}
+.reject-view {
+  color:#F00; 
+}
+
+.bottom-opt-view {
+  position: fixed; bottom:0px; background:#0d9a49; color:#FFF; width:100%; text-align:center; height: 30px; line-height: 30px; padding: 5px 0px;
+}
+.bottom-opt-view .phone {
+  border-right: 1px #FFF dotted;
+}

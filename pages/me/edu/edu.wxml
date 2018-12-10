@@ -1,0 +1,15 @@
+<view class="page">
+    <view class="page__hd page__header">
+        <view class="page__title">学历设置</view>
+        <view class="page__desc">设置学历，能让用人单位更了解你。选择下面的区域然后点击“确定保存”即可</view>
+        <!-- <input class='name-input' type='text' bindinput="onInputName" placeholder='可输入区域名称筛选'/> -->
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class='tags-view'>
+          <button wx:for="{{data}}" hidden='{{item.hide}}' wx:key="item" size="mini" type="{{item.checked?'warn':'default'}}" bindtap='onClick' data-obj-code='{{item.id}}' data-obj-name='{{item.name}}'>{{item.name}}</button>
+        </view>
+        <view class='submit-view'>
+          <button type='primary' bindtap='onSave'>确定保存</button>
+        </view>
+    </view>
+</view>

@@ -46,7 +46,7 @@ Page({
 
     app.apiUtil.request("MINI-C22", {}, function (res) {
       const obj = res.obj;
-      console.log(obj)
+      //console.log(obj)
       if (obj) {
         that.setData({
           idCardSrc: baseUrl + obj.frontPic,

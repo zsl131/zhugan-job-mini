@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/resume/index",
     "pages/me/index",
+    "pages/resume/index",
+    "pages/me/edu/edu",
     "pages/resume/update",
     "pages/me/headimg/upload",
     "pages/me/area/area",

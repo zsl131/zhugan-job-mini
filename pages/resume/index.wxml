@@ -1,11 +1,5 @@
 <view class="page">
-  <view class="page__bd">
-    <view class="weui-cells__title">我的简历
-      <navigator url='/pages/resume/update'>
-        <view class='edit-view'><image src="/images/img/edit-green.png"/> 编辑</view>
-      </navigator>
-    </view>
-  </view>
+  
   <view hidden='{{resume}}' class='no-resume-view'>
     <view class="remark">还没有简历</view>
     <navigator url="/pages/resume/update" >
@@ -13,6 +7,75 @@
     </navigator>
   </view>
   <view hidden='{{!resume}}' class="has-resume-view">
-    ---
+    <view class="page__bd">
+      <view class="weui-cells__title">我的简历
+        
+        <navigator url='/pages/resume/update'>
+          <view class='edit-view'><image src="/images/img/edit-green.png"/> 编辑</view>
+        </navigator>
+      </view>
+      <view class='resume-header'>
+        <view class="weui-flex">
+          <view>
+            <image src='{{baseUrl+personal.headimg}}' class="resume-header-img"/>
+          </view>
+          <view class="weui-flex__item">
+            <view class='header-single-line'>
+              <view class="name">{{personal.name}}</view>
+            </view>
+            <view class='header-single-line'>
+              <view class="tag">{{age}}</view>
+              <view class="tag">{{personal.sex=="1"?"男":"女"}}</view>
+              <view class="tag" hidden='{{!personal.eduId}}'>{{personal.eduName}}文凭</view>
+              <!-- <view class="tag">{{personal.tags}}</view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-flex count-view">
+        <view class="weui-flex__item"><view class="flex-item-count">
+          <view class="lable">简历更新时间</view>
+          <view class='value'>{{updateTime}}</view>
+        </view></view>
+        <view class="weui-flex__item"><view class="flex-item-count">
+          <view class="lable">简历更新次数</view>
+          <view class='value'>{{resume.updateCount}} 次</view>
+        </view></view>
+        <view class="weui-flex__item"><view class="flex-item-count">
+          <view class="lable">最近被浏览</view>
+          <view class='value'>{{resume.readCount}} 次</view>
+        </view></view>
+      </view>
+
+      <view class="weui-cells__title">概要</view>
+      <view class='single-info-view'>
+        <view class='lable'>求职岗位：</view>
+        <view class='value'>{{workNames}}</view>
+      </view>
+      <view class='single-info-view'>
+        <view class='lable'>工作地点：</view>
+        <view class='value'>{{resume.areaName}}</view>
+      </view>
+      <view class='single-info-view'>
+        <view class='lable'>个人特点：</view>
+        <view class='value'>{{resume.tags}}</view>
+      </view>
+      <view class='single-info-view'>
+        <view class='lable'>个人说明：</view>
+        <view class='value'>{{resume.remark}}</view>
+      </view>
+
+      <view class='single-info-view reject-view' hidden='{{status!="3"}}'>驳回原因：{{resume.rejectReason}}</view>
+
+      <view class='weui-flex bottom-opt-view'>
+        <view class="weui-flex__item phone">
+          {{resume.phone}}
+        </view>
+        <view class="weui-flex__item" bindtap='modifyStatus'>
+          {{statusName}}
+        </view>
+      </view>
+    </view>
   </view>
 </view>
