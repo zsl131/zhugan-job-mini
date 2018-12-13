@@ -21,7 +21,7 @@
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">适用对象</view>
-                    <view class="weui-form-preview__value">{{pro.targetUser=="personal"?"个人查看单位招聘信息":"单位查看简历中的电话和视频"}}</view>
+                    <view class="weui-form-preview__value">{{pro.type=="1"?(pro.targetUser=="personal"?"个人查看单位招聘信息":"单位查看简历中的电话和视频"):(pro.targetUser=="personal"?"个人刷新自己的简历":"单位刷新自己的招聘信息")}}</view>
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">产品价值</view>

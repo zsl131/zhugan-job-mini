@@ -49,8 +49,14 @@ Page({
     });
   },
   onBuy: function() {
-    app.apiUtil.request("MINI-C63", {id: that.data.id}, function(res) {
-      app.normalUtil.redirectToMsgSucc("购买成功", "/pages/production/index", "");
-    });
+    const pro = that.data.pro;
+    if(pro.price<=0) {
+      app.apiUtil.request("MINI-C63", {id: that.data.id}, function(res) {
+        app.normalUtil.redirectToMsgSucc("购买成功", "/pages/production/index", "");
+      });
+    } else {
+      //需要付费
+      console.log("-")
+    }
   }
 })
