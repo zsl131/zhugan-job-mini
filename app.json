@@ -1,6 +1,11 @@
 {
   "pages":[
+    "pages/production/index",
+    "pages/production/buy",
+    "pages/resume/show",
+    "pages/resumeStore/index",
     "pages/me/index",
+    "pages/resume/list",
     "pages/resume/index",
     "pages/me/edu/edu",
     "pages/resume/update",
@@ -27,8 +32,8 @@
     "selectedColor": "#0d9a49",
     "list": [
       {
-        "pagePath": "pages/personal/index",
-        "text": "招兼职",
+        "pagePath": "pages/resume/list",
+        "text": "简历库",
         "iconPath": "images/tabBar/find_0.png",
         "selectedIconPath": "images/tabBar/find_1.png"
       },

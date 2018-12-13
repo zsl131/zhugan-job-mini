@@ -13,3 +13,13 @@
 .page__desc {
   padding: 0px 15px; color:#888; font-size:14px;
 }
+
+.alert__error {
+  width:96%; background:#ffdddc;  line-height: 1.5; color:#e74a45; margin-top:3px; padding:8px 2%; font-size: 14px;
+}
+.alert__info {
+  width:96%; background:#ebffff;  line-height: 1.5; color:#257ab3; margin-top:3px; padding:8px 2%; font-size: 14px;
+}
+.alert__success {
+  width:96%; background:#f0ffeb;  line-height: 1.5; color:#086e26; margin-top:3px; padding:8px 2%; font-size: 14px;
+}

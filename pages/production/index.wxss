@@ -1,0 +1,41 @@
+/* pages/production/index.wxss */
+page {
+  background:#f8f8f8;
+}
+.single-pro {
+  width:94%; height:70px; background:#FFF; margin-left:3%; margin-top:12px;
+}
+.pro-content {
+  width:76%; float:left; border:1px #ff6f22 solid; height: 67px; border-right:none;
+}
+.pro-con-name {
+  float:left; width:65%; margin-left:5%; text-align:left; line-height: 1.5; 
+}
+.pro-con-name b {
+  float:left; width:100%; color:#000; font-size:20px;  margin-top:15px;line-height: 1;
+}
+.pro-con-name span {
+  float:left; width:100%; font-size:14px; color:#aaa;line-height: 1; margin-top:4px;
+}
+
+.pro-con-price {
+  float:right; width: 27%; text-align:right; margin-right:3%; line-height: 1.5; 
+}
+.pro-con-price b {
+  width:100%; font-size:20px; color:#ff5a00; font-weight: bold; float:left; margin-top:15px;line-height: 1;
+}
+.pro-con-price span {
+  text-decoration:line-through; width:100%; float:left; color:#aaa; line-height:1; margin-top:4px; font-size:14px;
+}
+
+.pro-opt {
+  width:23%; float:left; line-height: 70px; text-align:center; color:#FFF; background:#ff6f22; border-right:1px #ff6f22 solid;
+}
+
+
+.pro-remark {
+  margin-top: 50px; float:left; width:100%;
+}
+.pro-remark p {
+  width:100%; text-align:center; color:#a8a8a8; float:left;
+}

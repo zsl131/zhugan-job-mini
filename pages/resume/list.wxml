@@ -1,0 +1,21 @@
+<view class="list-personal">
+  <view class="single-personal" wx:for="{{data}}" wx:key="item">
+    <navigator url='/pages/resume/show?id={{item.id}}'>
+      <view class="personal-img-view"><image src="{{baseUrl+item.headimg}}" class="personal-img"></image></view>
+    </navigator>
+    <view class="personal-info">
+      <view class="base-info">
+        <view class="name"><navigator url='/pages/resume/show?id={{item.id}}'>{{item.name}}</navigator></view>
+        <view class="age">{{item.age}}</view>
+        <view class="sex">{{item.sex=="1"?"男":"女"}}</view>
+      </view>
+      <view class="hope"><b>{{item.areaName}}</b>{{item.workNames}}</view>
+      <view class="remark">{{item.remark}}</view>
+      <view class="contact">
+        <!-- <image src="/images/img/phone.png"></image>
+        <image src="/images/img/video.png"></image> -->
+        {{item.tags}}
+      </view>
+    </view>
+  </view>
+</view>

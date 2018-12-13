@@ -1,20 +1,24 @@
 <template name="company">
   <view wx:if="{{personal.checkCompany!='0'}}">
     <view class="page__bd">
-      <view class="weui-cells__title">单位锦囊</view>
+      <view class="weui-cells__title">我的锦囊</view>
     </view>
     <view class="weui-grids">
         <navigator url="/pages/me/company/auth" class="weui-grid" hover-class="weui-grid_active">
             <image class="weui-grid__icon" src="/images/img/grid-company-auth.png" />
-            <view class="weui-grid__label">认证材料</view>
+            <view class="weui-grid__label">单位材料</view>
         </navigator>
-        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
-            <image class="weui-grid__icon" src="/images/img/icon_tabbar.png" />
-            <view class="weui-grid__label">Grid</view>
+        <navigator url="/pages/me/information/modify" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-personal-auth.png" />
+            <view class="weui-grid__label">个人材料</view>
         </navigator>
-        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
-            <image class="weui-grid__icon" src="/images/img/icon_tabbar.png" />
-            <view class="weui-grid__label">Grid</view>
+        <navigator url="/pages/resume/index" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-resume.png" />
+            <view class="weui-grid__label">我的简历</view>
+        </navigator>
+        <navigator url="/page/resumeStore/index" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-favorite.png" />
+            <view class="weui-grid__label">我的收藏</view>
         </navigator>
     </view>
   </view>
@@ -32,6 +36,11 @@
             <image class="weui-grid__icon" src="/images/img/grid-resume.png" />
             <view class="weui-grid__label">我的简历</view>
         </navigator>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-favorite.png" />
+            <view class="weui-grid__label">我的收藏</view>
+        </navigator>
+        
         <navigator url="" class="weui-grid" hover-class="weui-grid_active">
             <image class="weui-grid__icon" src="/images/img/grid-favorite.png" />
             <view class="weui-grid__label">我的收藏</view>

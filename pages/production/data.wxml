@@ -1,0 +1,19 @@
+<template name="data">
+  <view class='single-pro' wx:for="{{data}}" wx:key="*this">
+    <view class='pro-content'>
+      <view class='pro-con-name'>
+        <b>{{item.worthCount}}个{{item.type=="1"?"查看":"刷新"}}币</b>
+        <span>{{item.remark}}</span>
+      </view>
+      <view class='pro-con-price'>
+        <b>￥{{item.price}}</b>
+        <span>￥{{item.oriPrice}}</span>
+      </view>
+    </view>
+    <navigator url='/pages/production/buy?id={{item.id}}'>
+    <view class='pro-opt' data-id='{{item.id}}'>
+      {{item.price<=0?"领取":"购买"}}
+    </view>
+    </navigator>
+  </view>
+</template>

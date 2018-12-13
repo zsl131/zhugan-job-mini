@@ -1,18 +1,9 @@
 <view class="page">
   
-  <view hidden='{{resume}}' class='no-resume-view'>
-    <view class="remark">还没有简历</view>
-    <navigator url="/pages/resume/update" >
-      <button type='primary'>立即创建简历</button>
-    </navigator>
-  </view>
   <view hidden='{{!resume}}' class="has-resume-view">
     <view class="page__bd">
-      <view class="weui-cells__title">我的简历
-        
-        <navigator url='/pages/resume/update'>
-          <view class='edit-view'><image src="/images/img/edit-green.png"/> 编辑</view>
-        </navigator>
+      <view class="weui-cells__title">简历详情
+          <view class='edit-view' bindtap="onStore"><view hidden="{{store}}"><image src="/images/img/grid-favorite.png"/> 收藏</view><view class='favorite' hidden="{{!store}}"><image src="/images/img/favorite-red.png"/> 取消收藏</view></view>
       </view>
       <view class='resume-header'>
         <view class="weui-flex">
@@ -21,11 +12,11 @@
           </view>
           <view class="weui-flex__item">
             <view class='header-single-line'>
-              <view class="name">{{personal.name}}</view>
+              <view class="name">{{name}}</view>
             </view>
             <view class='header-single-line'>
               <view class="tag">{{age}}</view>
-              <view class="tag">{{personal.sex=="1"?"男":"女"}}</view>
+              <!-- <view class="tag">{{personal.sex=="1"?"男":"女"}}</view> -->
               <view class="tag" hidden='{{!personal.eduId}}'>{{personal.eduName}}文凭</view>
               <!-- <view class="tag">{{personal.tags}}</view> -->
             </view>
@@ -66,14 +57,17 @@
         <view class='value'>{{resume.remark}}</view>
       </view>
 
-      <view class='single-info-view reject-view' hidden='{{status!="3"}}'>驳回原因：{{resume.rejectReason}}</view>
+      <view class='video-view' hidden='{{!hasViewVideo}}'>
+        <video src='{{personal.videoUrl}}'></video>
+      </view>
 
       <view class='weui-flex bottom-opt-view'>
-        <view class="weui-flex__item phone">
-          {{resume.phone}}
+        <view class="weui-flex__item phone" bindtap='onViewPhone' data-phone='{{resume.phone}}'>
+          <view><image src='/images/img/phone_white.png'/>  查看电话</view>
         </view>
-        <view class="weui-flex__item" bindtap='modifyStatus'>
-          {{statusName}}
+        <view class="weui-flex__item" bindtap='onViewVideo' data-url='{{personal.videoUrl}}'>
+          <view class='show-video' hidden='{{personal.hasVideo=="0"}}'><image src='/images/img/video_white.png'/>  查看视频</view>
+          <view hidden='{{personal.hasVideo!="0"}}'>无视频</view>
         </view>
       </view>
     </view>

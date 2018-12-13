@@ -5,6 +5,7 @@ const config = require("./utils/config.js");
 const normalUtil = require("./utils/normalUtil.js");
 const personalUtil = require("./utils/personalUtil.js");
 const util = require("./utils/util.js");
+const walletUtil = require("./utils/walletUtil.js");
 App({
   onLaunch: function () {
     try {
@@ -29,4 +30,5 @@ App({
   storage: storage,
   personalUtil: personalUtil,
   util: util,
+  walletUtil: walletUtil,
 })

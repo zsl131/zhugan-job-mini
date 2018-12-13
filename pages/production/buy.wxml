@@ -1,0 +1,43 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">收银台</view>
+        <!-- <view class="page__desc">收银产品核对</view> -->
+    </view>
+    <view class="page__bd">
+        
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__label">付款金额</view>
+                <view class="weui-form-preview__value_in-hd">¥ {{pro.price}} 元</view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">产品名称</view>
+                    <view class="weui-form-preview__value">{{pro.name}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">产品原价</view>
+                    <view class="weui-form-preview__value" style='text-decoration: line-through'>￥ {{pro.oriPrice}} 元</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">适用对象</view>
+                    <view class="weui-form-preview__value">{{pro.targetUser=="personal"?"个人查看单位招聘信息":"单位查看简历中的电话和视频"}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">产品价值</view>
+                    <view class="weui-form-preview__value">可{{pro.type=='1'?"查看":"刷新"}}【{{pro.worthCount}}】次</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">产品备注</view>
+                    <view class="weui-form-preview__value">{{pro.remark}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <navigator open-type="navigateBack" class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">返回重选</navigator>
+                <view class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap='onBuy'>确定{{pro.price<=0?"领取":"购买"}}</view>
+            </view>
+        </view>
+
+        <view class='alert__error' hidden='{{pro.targetUser != "company" || personal.checkCompany=="1"}}'>建议您认证单位信息后再来购买</view>
+    </view>
+</view>

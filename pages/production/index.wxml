@@ -1,0 +1,29 @@
+<import src="data.wxml"/>
+<view class="weui-tab">
+    <view class="weui-navbar"  style="background:#FFF">
+        <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick" data-index='{{index}}'>
+                <view class="weui-navbar__title">{{item}}</view>
+            </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}" style="padding:0px;">
+        <view class='alert__success' style='text-align:center'>用于刷新自己简历或查看单位招聘信息</view>
+        <template is="data" data="{{data: data}}"/>
+        <view class='pro-remark'>
+          <p>查看币：用于查看招聘单位的联系电话</p>
+          <p>刷新币：用于刷新自己简历使其更靠前</p>
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='alert__success' style='text-align:center'>用于刷新单位招聘信息或查看人才简历</view>
+        <template is="data" data="{{data: data}}"/>
+        <view class='pro-remark'>
+          <p>查看币：用于查看简历的联系电话和视频</p>
+          <p>刷新币：用于刷新招聘信息使其更靠前</p>
+        </view>
+      </view>
+    </view>
+</view>
