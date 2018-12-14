@@ -1,4 +1,4 @@
-// pages/resumeStore/index.js
+// pages/wallet/index.js
 const app = getApp();
 let that;
 Page({
@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    wallet:{},
   },
 
   /**
@@ -15,10 +15,7 @@ Page({
    */
   onLoad: function (options) {
     that = this;
-  },
-
-  loadStore: function() {
-
+    that.loadWallet();
   },
 
   /**
@@ -34,4 +31,9 @@ Page({
   onShow: function () {
 
   },
+  loadWallet: function() {
+    app.apiUtil.request("MINI-C51",{}, function(res) {
+      that.setData({wallet: res.obj});
+    })
+  }
 })

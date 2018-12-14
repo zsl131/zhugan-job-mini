@@ -16,14 +16,18 @@
             <image class="weui-grid__icon" src="/images/img/grid-resume.png" />
             <view class="weui-grid__label">我的简历</view>
         </navigator>
-        <navigator url="/page/resumeStore/index" class="weui-grid" hover-class="weui-grid_active">
+        <navigator url="/pages/resumeStore/index" class="weui-grid" hover-class="weui-grid_active">
             <image class="weui-grid__icon" src="/images/img/grid-favorite.png" />
             <view class="weui-grid__label">我的收藏</view>
+        </navigator>
+        <navigator url="/pages/wallet/index" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="/images/img/grid-wallet.png" />
+            <view class="weui-grid__label">我的账户</view>
         </navigator>
     </view>
   </view>
 
-  <view wx:if="{{personal.checkIdcard!='0'}}">
+  <!-- <view wx:if="{{personal.checkIdcard!='0'}}">
     <view class="page__bd">
       <view class="weui-cells__title">个人锦囊</view>
     </view>
@@ -46,5 +50,5 @@
             <view class="weui-grid__label">我的收藏</view>
         </navigator>
     </view>
-  </view>
+  </view> -->
 </template>
