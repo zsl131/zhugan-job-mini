@@ -1,0 +1,35 @@
+<template name="resume">
+  <view class="resume-main">
+    <view wx:if="{{!data || data.length<=0}}" class="no-data">
+      <view>此处空空如也~</view>
+      <navigator url='/pages/resume/list' open-type='switchTab'>
+        <view class='href'>去简历库转转 > </view>
+      </navigator>
+    </view>
+    <view wx:for="{{data}}" wx:key="*this" class='single-resume'>
+      <view class="weui-flex">
+          <view>
+            <navigator url='/pages/resume/show?id={{item.id}}'>
+            <view class='headimg'>
+              <image src='{{baseUrl+item.headimg}}'/>
+            </view>
+            </navigator>
+          </view>
+          <view class="weui-flex__item">
+            <view class="personal-info">
+              <view class="base-info">
+                <view class="name"><navigator url='/pages/resume/show?id={{item.id}}'>{{item.name}}</navigator></view>
+                <view class="age">{{item.age}}</view>
+                <view class="sex">{{item.sex=="1"?"男":"女"}}</view>
+                <view class="edu">{{item.eduName}}</view>
+              </view>
+              <view class="hope"><b>{{item.areaName}}</b>{{item.workNames}}</view>
+            </view>
+          </view>
+          <view>
+            <icon class='cancel-icon' bindtap='onRemoveStore' data-type='resume' data-id='{{item.id}}' data-name="{{item.name}}" type="cancel" size="23"/>
+          </view>
+      </view>
+    </view>
+  </view>
+</template>

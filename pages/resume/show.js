@@ -34,7 +34,6 @@ Page({
     that.loadResume();
   },
   onStore: function() {
-    console.log(that.data.store)
     const store = that.data.store;
     let msg ;
     app.apiUtil.request("MINI-C47", {id: that.data.id}, function(res) {

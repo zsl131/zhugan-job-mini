@@ -1,11 +1,11 @@
 {
   "pages":[
+    "pages/myStore/index",
     "pages/me/index",
     "pages/wallet/index",
     "pages/production/index",
     "pages/production/buy",
     "pages/resume/show",
-    "pages/resumeStore/index",
     "pages/resume/list",
     "pages/resume/index",
     "pages/me/edu/edu",
